@@ -1,0 +1,8 @@
+# Environment variables / secrets
+.env
+
+# Raw data from API responses
+data/
+
+# Mac Finder crap
+*.DS_Store
