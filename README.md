@@ -10,6 +10,14 @@ CryptoTracker is a simple yet powerful tool that:
 3. Saves the data locally as JSON files
 4. Uploads the files to Azure Blob Storage for persistence and sharing
 
+## Screenshots
+
+### Raw JSON Data
+![Raw JSON Data](CoinGecko/screenshots/raw_data.jpg)
+
+### Successful Upload Confirmation
+![Upload Confirmation](CoinGecko/screenshots/upload_success.jpg)
+
 ## Features
 
 - **Real-time Data**: Fetches up-to-date cryptocurrency prices from CoinGecko
@@ -131,14 +139,6 @@ Here's a sample of the JSON data structure:
   "last_updated": "2025-05-02T00:10:25.889Z"
 }
 ```
-
-## Screenshots
-
-### Raw JSON Data
-![Raw JSON Data](CoinGecko/screenshots/raw_data.jpg)
-
-### Successful Upload Confirmation
-![Upload Confirmation](CoinGecko/screenshots/upload_success.jpg)
 
 ## Acknowledgments
 
