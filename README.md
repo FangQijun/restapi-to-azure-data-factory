@@ -138,7 +138,7 @@ Here's a sample of the JSON data structure:
 ![Raw JSON Data](CoinGecko/screenshots/raw_data.jpg)
 
 ### Successful Upload Confirmation
-![Upload Confirmation](CoinGecko/screenshots/upload_success.png)
+![Upload Confirmation](CoinGecko/screenshots/upload_success.jpg)
 
 ## Acknowledgments
 
