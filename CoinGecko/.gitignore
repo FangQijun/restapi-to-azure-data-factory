@@ -3,6 +3,7 @@
 
 # Raw data from API responses
 data/
+logs/
 
 # Mac Finder crap
 *.DS_Store
