@@ -13,7 +13,8 @@ dependencies = [
     "pymssql (>=2.3.4,<3.0.0)",
     "pyodbc (>=5.2.0,<6.0.0)",
     "pandas (>=2.2.3,<3.0.0)",
-    "requests (>=2.32.3,<3.0.0)"
+    "requests (>=2.32.3,<3.0.0)",
+    "sqlalchemy (>=2.0.40,<3.0.0)"
 ]
 
 [tool.poetry]
