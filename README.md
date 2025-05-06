@@ -18,6 +18,9 @@ CryptoTracker is a simple yet powerful tool that:
 ### Successful Upload Confirmation
 ![Upload Confirmation](CoinGecko/screenshots/upload_success.jpg)
 
+### Successful Data Load to Azure SQL Server
+![Dat Load Confirmation](CoinGecko/screenshots/load_to_db_success.jpg)
+
 ## Features
 
 - **Real-time Data**: Fetches up-to-date cryptocurrency prices from CoinGecko
@@ -48,42 +51,31 @@ pip install -r requirements.txt
 
 ## Configuration
 
-1. Create a `.env` file in the project root with your Azure credentials:
+Create a `.env` file in the project root with your Azure credentials:
 
 ```
 AZURE_STORAGE_CONNECTION_STRING=your_connection_string
 AZURE_CONTAINER_NAME=your_container_name
-```
-
-2. Configure your cryptocurrency settings in `config.py`:
-
-```python
-CRYPTO_IDS = [
-    "bitcoin",
-    "ethereum",
-    "solana",
-    "cardano",
-    "ripple"
-]
+SQL_SERVER=your_sql_server
+SQL_DATABASE=your_sql_db
+SQL_USERNAME=your_sql_db_username
+SQL_PASSWORD=your_sql_db_password
 ```
 
 ## Usage
 
 ### Basic Usage
 
-Run the main script to fetch current prices and upload to Azure:
+Run the first main script to fetch current prices from REST API and upload to Azure:
 
 ```bash
 python coingecko_to_azure.py
 ```
 
-### Scheduled Data Collection
-
-Set up a cron job or Windows Task Scheduler to run the script at regular intervals:
+Run the second main script to get connected to Azure SQL Server and upload the local `.json` file to Azure SQL Database:
 
 ```bash
-# Example cron job (every hour)
-0 * * * * cd /path/to/restapi-to-azure-data-factory && python coingecko_to_azure.py
+python crypto_json_to_sql.py
 ```
 
 ## Project Structure
@@ -99,7 +91,8 @@ RESTAPI-TO-AZURE-DATA_FACTORY
 │   ├── tests/                               # Test directory
 │   ├── .env                                 # Environment variables
 │   ├── .gitignore                           # Git ignore file
-│   ├── coingecko_to_azure.py                # Main script
+│   ├── coingecko_to_azure.py                # Main script 1
+│   ├── crypto_json_to_sql.py                # Main script 2
 │   ├── poetry.lock                          # Poetry dependencies lock
 │   ├── pyproject.toml                       # Project configuration
 │   └── README.md                            # This file
