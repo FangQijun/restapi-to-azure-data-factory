@@ -1,2 +1,10 @@
 # Mac Finder crap
 *.DS_Store
+
+# Ignore all files in data and logs directories
+CoinGecko/data/*
+CoinGecko/logs/*
+
+# But keep the directories themselves by not ignoring .gitkeep files
+!CoinGecko/data/.gitkeep
+!CoinGecko/logs/.gitkeep
