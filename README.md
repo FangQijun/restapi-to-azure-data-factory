@@ -19,7 +19,7 @@ CryptoTracker is a simple yet powerful tool that:
 ![Upload Confirmation](CoinGecko/screenshots/upload_success.jpg)
 
 ### Successful Data Load to Azure SQL Server
-![Dat Load Confirmation](CoinGecko/screenshots/load_to_db_success.jpg)
+![Data Load Confirmation](CoinGecko/screenshots/load_to_db_success.png)
 
 ## Features
 
